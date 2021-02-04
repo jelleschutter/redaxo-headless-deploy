@@ -1,7 +1,7 @@
 name: 'REDAXO Headless Action'
 description: 'Action for deploying SPAs to REDAXO Headless.'
 inputs:
-  folder:
+  url:
     description: 'URL of REDAXO instance'
     required: true
   token:
