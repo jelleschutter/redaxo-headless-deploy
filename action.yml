@@ -1,0 +1,16 @@
+name: 'REDAXO Headless Action'
+description: 'Action for deploying SPAs to REDAXO Headless.'
+inputs:
+  folder:
+    description: 'URL of REDAXO instance'
+    required: true
+  token:
+    description: 'REDAXO Headless token'
+    required: true
+  folder:
+    description: 'folder where built SPA is located'
+    required: true
+    default: 'dist'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

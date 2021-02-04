@@ -1,0 +1,36 @@
+{
+  "name": "redaxo-headless-deploy",
+  "version": "0.0.1",
+  "description": "Action for deploying to REDAXO Headless",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "prepare": "ncc build index.js -o dist --source-map --license licenses.txt",
+    "all": "npm run lint && npm run prepare"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jelleschutter/redaxo-headless-deploy.git"
+  },
+  "keywords": [
+    "GitHub",
+    "Actions",
+    "JavaScript"
+  ],
+  "author": "Jelle Schutter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jelleschutter/redaxo-headless-deploy/issues"
+  },
+  "homepage": "https://github.com/jelleschutter/redaxo-headless-deploy#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.5",
+    "archiver": "^5.2.0",
+    "axios": "^0.21.1",
+    "stream-buffers": "^3.0.2"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.27.0",
+    "eslint": "^7.4.0"
+  }
+}
